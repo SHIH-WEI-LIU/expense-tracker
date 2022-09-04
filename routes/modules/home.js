@@ -43,6 +43,5 @@ router.get('/:categoryName', (req, res) => {
     .catch(error => console.error(error))
 })
 
-
 // 匯出路由模組
 module.exports = router

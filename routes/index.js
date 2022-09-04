@@ -19,3 +19,4 @@ router.use('/auth', auth)
 router.use('/', authenticator, home)
 
 module.exports = router // 匯出路由器
+
