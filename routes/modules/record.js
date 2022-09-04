@@ -27,9 +27,9 @@ router.get('/:id/edit', (req, res) => {
 })
 //修改特定資料的路由
 router.put('/:id', (req, res) => {
-  const _id = req.params.id
+  const id = req.params.id
   const userId = req.user._id
-  return Record.findOneAndUpdate({ _id, userId, ...req.body }) //找到對應的資料後整個一起更新
+  return Record.findOneAndUpdate({ id, userId, ...req.body }) //找到對應的資料後整個一起更新
     .then(() => res.redirect('/'))
     .catch(error => console.log(error))
 })
