@@ -37,3 +37,4 @@ db.once('open', () => {
       process.exit()
     })
 })
+
