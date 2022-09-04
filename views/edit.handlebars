@@ -1,0 +1,55 @@
+<div class="create-container">
+  <form action="/records/{{record._id}}?_method=PUT" method="POST">
+    <div class="mb-3 pt-2">
+      <h1 class="mb-10 record-createTitle" style="color:black ;">編輯支出</h1>
+      <label for="name" class="form-label">名稱<span class="text-danger">*</span></label>
+      <div class="d-flex">
+        <input type="text" class="form-control " id="name" placeholder="名稱" name="name" value="{{record.name}}"
+          required />
+        <button onclick="document.getElementById('name').value = ''" class="btn btn-outline-secondary">X</button>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="date" class="form-label">日期<span class="text-danger">*</span></label>
+      <div class="d-flex">
+        <input type="date" class="form-control" id="date" name="date" value="{{record.date}}" required />
+        <button onclick="document.getElementById('date').value = ''" class="btn btn-outline-secondary">X</button>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="categoryName" class="form-label">類別<span class="text-danger">*</span></label>
+      <select type="text" class="form-control" id="categoryName" placeholder="類別" list="categoryOptions"
+        name="categoryName" value="{{record.categoryName}}" required />
+      <button onclick="document.getElementById('categoryName').value = ''" class="btn btn-outline-secondary">X</button>
+      <datalist id="categoryOptions">
+        <option><i class="fa-solid fa-house"></i>居家物業</option>
+        <option><i class="fa-solid fa-van-shuttle"></i>交通出行</option>
+        <option><i class="fa-solid fa-face-grin-beam"></i>休閒娛樂</option>
+        <option><i class="fa-solid fa-utensils"></i>餐飲食品</option>
+        <option><i class="fa-solid fa-pen"></i>其他</option>
+      </datalist>
+      </select>
+    </div>
+    <div class="mb-3 pt-3">
+      <label for="amount" class="form-label">金額<span class="text-danger">*</span></label>
+      <div class="d-flex">
+        <input type="text" class="form-control " id="amount" placeholder="請輸入金額" name="amount" value="{{record.amount}}"
+          required />
+        <button onclick="document.getElementById('amount').value = ''" class="btn btn-outline-secondary">X</button>
+      </div>
+    </div>
+
+    <div class="text-center mb-5">
+      <button type="submit" class="btn btn-primary">
+        確定編輯
+      </button>
+      <a href="/">
+        <button type="button" class="btn btn-outline-secondary">
+          返回首頁
+        </button>
+      </a>
+      {{! 使用type="reset" 可以清除/還原輸入 }}
+      <button type="reset" class="btn btn-outline-danger">重新輸入</button>
+    </div>
+  </form>
+</div>

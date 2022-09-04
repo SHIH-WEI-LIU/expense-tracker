@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>expense-tracker</title>
+
+  <!--Boostrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <!--icon-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+  <!--CSS-->
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <header>
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          {{#if isAuthenticated}}Welcome To {{user.name}}'s {{/if}}家庭記事本
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
+          aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        {{#if isAuthenticated}}
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                選擇類別
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="/">總支出</a></li>
+                <li><a class="dropdown-item" href="/居家物業">居家物業</a></li>
+                <li><a class="dropdown-item" href="/交通出行">交通出行</a></li>
+                <li><a class="dropdown-item" href="/休閒娛樂">休閒娛樂</a></li>
+                <li><a class="dropdown-item" href="/餐飲食品">餐飲食品</a></li>
+                <li><a class="dropdown-item" href="/其他">其他</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        {{/if}}
+      </div>
+      {{#if isAuthenticated}}
+      <a href="/users/logout" class="btn btn-secondary">
+        Logout
+      </a>
+      {{/if}}
+    </nav>
+
+  </header>
+
+  <!-- partial templates will replace the part of "body" here -->
+  {{{ body }}}
+
+
+  <!-- include javascript files here -->
+  <script src="/javascripts/popper.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+  <script src="https://kit.fontawesome.com/10b13ec982.js" crossorigin="anonymous"></script>
+</body>
+
+<footer>
+  <p class="login-p">
+    We wish you have a nice day !
+  </p>
+</footer>
+
+</html>

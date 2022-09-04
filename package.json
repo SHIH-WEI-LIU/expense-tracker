@@ -1,0 +1,33 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node models/seeds/categorySeeder.js && node models/seeds/recordSeeder.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.2",
+    "express-session": "^1.17.1",
+    "handlebars-helpers": "^0.10.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.7",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-line": "^0.0.4",
+    "passport-line-auth": "^0.2.9",
+    "passport-local": "^1.0.0",
+    "standard": "^17.0.0"
+  }
+}
