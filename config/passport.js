@@ -3,7 +3,7 @@ const LocalStrategy = require('passport-local')
 const FacebookStrategy = require('passport-facebook').Strategy
 const GoogleStrategy = require('passport-google-oauth20').Strategy
 const LineStrategy = require('passport-line').Strategy
-const User = require('../models/user')
+const User = require('../models/Users')
 const bcrypt = require('bcryptjs')
 
 module.exports = app => {

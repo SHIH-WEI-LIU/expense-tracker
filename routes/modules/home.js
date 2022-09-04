@@ -2,7 +2,7 @@
 const express = require('express')
 const router = express.Router()
 // 引用 Restaurant model
-const Record = require('../../models/record')
+const Record = require('../../models/Record')
 const categoryIcon = {
   '居家物業': '<i class="categoryIcon fa-solid fa-house"></i>',
   '交通出行': '<i class="categoryIcon fa-solid fa-van-shuttle"></i>',

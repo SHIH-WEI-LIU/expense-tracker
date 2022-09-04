@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Record = require('../../models/record')
+const Record = require('../../models/Record')
 
 // routes setting
 //create
@@ -42,5 +42,11 @@ router.delete('/:id', (req, res) => {
     .then(() => res.redirect('/'))
     .catch(error => console.log(error))
 })
+
+//chart
+router.get('/chart', (req, res) => {
+  return res.render('chart')
+})
+
 
 module.exports = router
