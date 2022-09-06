@@ -3,7 +3,7 @@
 
 Is there something bothering you after you cost large expenditure ?
 but you don't know those costs go to where ?
-pleas don't worry ! from now on you can use this ewb to reocrd any your costs !
+pleas don't worry ! from now on you can use this web to record any your costs !
 
 
 ## Features
